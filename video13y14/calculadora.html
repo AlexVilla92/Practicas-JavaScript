@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculadora</title>
+	<script >
+		var num1 = prompt("ingrese 1 numero");
+		var num2 = prompt("ingrese 2 numero");
+		var operacion = prompt("ingresa que operacion, desea realizar: sum/res/prod/div").toLowerCase();
+
+		if (!((isNaN(num1)) || (isNaN(num2)))) {
+			switch (operacion) {
+				case "sum":
+					alert("el resultado es: " + (parseInt(num1) + parseInt(num2)));
+					break;
+				case "res":
+					alert("el resultado es: " + (parseInt(num1) - parseInt(num2)));
+					break;
+				case "prod":
+					alert("el resultado es: " + (parseInt(num1) * parseInt(num2)));
+					break;
+				case "div":
+					if (parseInt(num2) == 0) {
+						alert("no se pude dividir por cero");
+					} else {
+						alert("el resultado es: " + (parseInt(num1) / parseInt(num2)));
+					}
+					break;
+				default:
+					alert("operacion invalida");
+			}
+		} else {
+			alert("valores invalidos");
+		}			
+	</script>
+</head>
+<body>
+
+</body>
+</html>

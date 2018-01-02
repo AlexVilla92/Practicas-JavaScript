@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>random</title>
+	<script>
+		//con solamente math random, tenes n entre 0 y 1, al 
+		//multiplicarlo por 100, tenes entre 0 y 100
+		alert("adivina el numero! tienes 5 intentos");
+		var intentos = 5;
+		var random = Math.round(Math.random() * 100);
+		//alert(random);		
+
+		do {
+			var number = prompt("ingrese valor: ");
+
+			if (number == random) {
+				alert("Acertaste! el numero es: " + number);	
+			} else {
+				if (number > random) {
+					alert("el numero es menor a " + number);
+				} else {
+					alert("el numero es mayor a " + number);
+				}
+				intentos--;
+				alert("te quedan: " + intentos);
+			}
+
+		} while (random != number && intentos > 0);	
+
+		if (!intentos) alert("YOU LOSE");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

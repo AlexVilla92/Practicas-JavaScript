@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="css/micss.css">
+<script>
+    var articulos = ["bufanda", "remera", "zapatillas", "calzon"];
+    //var articulos = new Array("remera", "zapatillas", "calzon");
+    //var articulos = []
+	
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+    <script>
+	   document.write("<p> el primer articulo es: <strong>");
+		 document.write(articulos[0] + "</strong></p>");
+     alert("cantidad de elementos " + articulos.length);
+     document.write("<p> el ultimo elemento: <strong>");
+     document.write(articulos[articulos.length - 1] + "</strong></p>");
+
+     //agrego al final y al final
+     articulos.push("balon");//al final, pop() elimino al final
+     document.write("<p>RELOADED el ultimo elemento: <strong>");
+     document.write(articulos[articulos.length - 1] + "</strong></p>");
+     articulos.unshift("patines");//al principio, .shift() eliminar al principio
+     alert("cantidad de elementos " + articulos.length);
+     document.write("<p> primer elemento: <strong>");
+     document.write(articulos[0] + "</strong></p>");
+
+     //elemento fuera de rango
+     document.write("<p> elemento " + articulos[6] + "</p>")
+
+     //agregar elementos por teclado
+     articulos.push(prompt("ingrese elemento a la lista"));
+     alert("cantidad de elementos " + articulos.length);
+     document.write("<p>RELOADED 2 el ultimo elemento por teclado: <strong>");
+     document.write(articulos[articulos.length - 1] + "</strong></p>");
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>

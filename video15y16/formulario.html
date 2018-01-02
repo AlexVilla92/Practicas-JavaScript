@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>formulario</title>
+	<style>
+		#contenedor {
+			width: 25%;
+			background-color: #ffc;
+			margin: auto;
+			padding: 15px;
+		}
+	</style>
+
+	<script>
+		var nombre, pais, edad = 1;
+		
+		nombre = prompt("ingrese nombre: ");
+		do {
+			nombre = prompt("ingrese nombre: ");
+		} while (!isNaN(nombre)); 
+
+		edad = prompt("ingrese edad: ");
+		while (edad <= 0 || edad > 90 || isNaN(edad)) {
+			alert("edad invalido, reeingrese: ");
+			edad = prompt("ingrese edad: ");
+		}
+
+		pais = prompt("ingrese pais: ");
+		while (!isNaN(pais)) {
+			alert("pais invalido, reeingrese: ");
+			pais = prompt("ingrese pais: ");
+		}
+	</script>
+</head>
+<body>
+	<div id = "contenedor">
+		<p>Nombre:
+			<script> document.write(nombre) </script>
+		</p>
+		<p>Edad:
+			<script> document.write(edad) </script>
+		</p>
+		<p>Pais:
+			<script> document.write(pais) </script>
+		</p>
+	</div>
+</body>
+</html>

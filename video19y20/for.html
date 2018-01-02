@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cargar nombres con for</title>
+	<script>
+		var trabajadores = new Array();
+		var salir = "";
+
+		while (salir != "salir") {
+			var unNombre = prompt("Ingrese nombre: ");
+			trabajadores.push(unNombre);
+			salir = prompt("para salir: salir, seguir: seguir").toLowerCase();
+		}
+
+		document.write("cantidad de elementos: " + trabajadores.length + "<br/>");
+
+		for (var i = 0; i < trabajadores.length; ++i) {
+			document.write(trabajadores[i] + "<br/>");
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

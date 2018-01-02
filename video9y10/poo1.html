@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>modificar boton</title>
+	<input type="button" id="boton1">
+	<input type="button" id="boton2">
+	<input type="text" id="cuadro">
+</head>
+<body>
+	<script>//almacene dentro de la variable el objeto boton1
+		var miBoton = document.getElementById("boton1");
+		miBoton.style.width = "250px";
+		miBoton.style.height = "200px";//altura
+		//miBoton.style.backgroundColor = "blue";
+		var otroBoton = document.getElementById("boton2");
+		otroBoton.style.width = "250px";
+		otroBoton.style.height = "200px";
+
+		var celda = document.getElementById("cuadro");
+		celda.focus();
+
+		celda.style.background = "red";
+		celda.value = "escriba texto"; //escribir texto de fondo
+		celda.style.height = "50px";
+	</script>
+</body>
+</html>

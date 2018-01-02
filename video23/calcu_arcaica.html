@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>calculador arcaica</title>
+	<script>
+		function sumar(number1, number2) {
+			alert("la suma es: " + (number1 + number2));
+		}
+
+		function resta(number1, number2) {
+			alert("la resta es: " + (number1 - number2));
+		}
+
+		function multiplicar(number1, number2) {
+			alert("el producto es: " + (number1 * number2));
+		}
+
+		function dividir(number1, number2) {
+			alert("la division es: " + (number1 / number2));
+		}
+
+		var operacion = prompt("que operacion deseas realizar: ").toLowerCase();
+		var number1 = parseInt(prompt("ingrese n1: "));
+		var number2 = parseInt(prompt("ingrese n2: "));
+
+		if (!((isNaN(number1)) || (isNaN(number2)))) {
+			switch (operacion) {
+				case "suma":
+					sumar(number1, number2);
+					break;
+				case "resta":
+					resta(number1, number2);
+					break;
+				case "producto":
+					multiplicar(number1, number2);
+					break;
+				case "division":
+					if (parseInt(num2) == 0) {
+						alert("no se pude dividir por cero");
+					} else {
+						dividir(number1, number2);
+					}
+					break;
+				default:
+					alert("operacion invalida");
+			}
+		} else {
+			alert("valores invalidos");
+		}
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
